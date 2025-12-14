@@ -1,2 +1,4 @@
 # wsnh2022.github.io
-My Initial portfolio website
+My Initial portfolio website still under development
+
+

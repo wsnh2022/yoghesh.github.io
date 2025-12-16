@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoghesh | Data Analyst & Business Automation</title>
-    <meta name="description" content="Portfolio of Yoghesh - Data Analyst, Business Automation, and Operations Specialist with 13+ years of experience in supply chain optimization and workflow automation.">
+    <title>Yoghesh VM | Data Analyst & Supply Chain Optimization</title>
+    <meta name="description" content="Supply Chain Data Analyst with 10+ years of experience in inventory analytics, reporting automation, and operations optimization. Open to full-time roles in Chennai/Hyderabad.">
     
     <!-- HTML Meta Tags -->
-    <title>Yoghesh | Data Analyst & Business Automation</title>
-    <meta name="description" content="Transforming raw data into decisive action. 13+ years optimizing supply chains and automating operations.">
+    <title>Yoghesh VM | Data Analyst & Supply Chain Optimization</title>
+    <meta name="description" content="Transforming raw data into decisive action. 10+ years optimizing supply chains and automating operations.">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://wsnh2022.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Yoghesh | Data Analyst & Business Automation">
-    <meta property="og:description" content="Transforming raw data into decisive action. 13+ years optimizing supply chains and automating operations.">
+    <meta property="og:title" content="Yoghesh VM | Data Analyst & Supply Chain Optimization">
+    <meta property="og:description" content="Transforming raw data into decisive action. 10+ years optimizing supply chains and automating operations.">
     <meta property="og:image" content="https://wsnh2022.github.io/og_tag.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="wsnh2022.github.io">
     <meta property="twitter:url" content="https://wsnh2022.github.io/">
-    <meta name="twitter:title" content="Yoghesh | Data Analyst & Business Automation">
-    <meta name="twitter:description" content="Transforming raw data into decisive action. 13+ years optimizing supply chains and automating operations.">
+    <meta name="twitter:title" content="Yoghesh VM | Data Analyst & Supply Chain Optimization">
+    <meta name="twitter:description" content="Transforming raw data into decisive action. 10+ years optimizing supply chains and automating operations.">
     <meta name="twitter:image" content="https://wsnh2022.github.io/og_tag.png">
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%2338bdf8'>Y</text></svg>">
@@ -140,7 +139,7 @@
             transition: max-height 0.3s ease;
         }
         #mobileMenu.active {
-            max-height: 300px;
+            max-height: 500px;
         }
 
         /* Scroll Animations */
@@ -173,6 +172,24 @@
             background: linear-gradient(180deg, #38bdf8 0%, transparent 100%);
             opacity: 0.3;
         }
+
+        /* Project Filter Buttons */
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+        .filter-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            border-color: #38bdf8;
+        }
+
+        /* Project Card Hide/Show */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card.hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="min-h-screen selection:bg-accent selection:text-midnight overflow-x-hidden">
@@ -189,11 +206,31 @@
             </a>
             
             <!-- Desktop Menu -->
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400 items-center">
                 <a href="#overview" class="hover:text-white transition-colors">Overview</a>
                 <a href="#experience" class="hover:text-white transition-colors">Timeline</a>
-                <a href="#projects" class="hover:text-white transition-colors">Case Studies</a>
-                <a href="#contact" class="text-accent hover:text-accent/80 transition-colors">Hire Me</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="text-accent hover:text-accent/80 transition-colors">Contact</a>
+                
+                <!-- Social Links -->
+                <div class="flex gap-3 ml-4 pl-4 border-l border-white/10">
+                    <a href="https://www.linkedin.com/in/yoghesh-analytics/" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-accent transition-colors" title="LinkedIn">
+                        <i class="fab fa-linkedin text-lg"></i>
+                    </a>
+                    <a href="https://github.com/wsnh2022" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-accent transition-colors" title="GitHub">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/datacraft.yogi/" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-accent transition-colors" title="Instagram">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://wa.me/919600139825" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-success transition-colors" title="WhatsApp">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -207,8 +244,28 @@
             <div class="flex flex-col gap-4 text-sm font-medium text-slate-400 pt-4 border-t border-white/10">
                 <a href="#overview" class="hover:text-white transition-colors">Overview</a>
                 <a href="#experience" class="hover:text-white transition-colors">Timeline</a>
-                <a href="#projects" class="hover:text-white transition-colors">Case Studies</a>
-                <a href="#contact" class="text-accent hover:text-accent/80 transition-colors">Hire Me</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="text-accent hover:text-accent/80 transition-colors">Contact</a>
+                
+                <!-- Social Links -->
+                <div class="flex gap-4 pt-4 border-t border-white/10">
+                    <a href="https://www.linkedin.com/in/yoghesh-analytics/" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-accent transition-colors" title="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/wsnh2022" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-accent transition-colors" title="GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/datacraft.yogi/" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-accent transition-colors" title="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/919600139825" target="_blank" rel="noopener noreferrer" 
+                       class="text-slate-400 hover:text-success transition-colors" title="WhatsApp">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -218,26 +275,28 @@
         <!-- Hero Section -->
         <header class="text-center mb-24 scroll-reveal">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-mono mb-6 animate-float">
-                <i class="fas fa-circle text-[8px] animate-pulse"></i> OPEN FOR FREELANCE 2025
+                <i class="fas fa-circle text-[8px] animate-pulse"></i> EXPLORING NEW OPPORTUNITIES
             </div>
             <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 I Help Businesses Make <br class="hidden md:block" />
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">Faster, Smarter Decisions</span> <br class="hidden md:block" />
                 Through Data
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                <strong>Data Analyst & Business Automation</strong> with 13+ years of experience optimizing supply chains and operations.
-                I build the data systems, dashboards, and automated workflows that help businesses scale without chaos.
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-4">
+                <strong>Data Analyst & Supply Chain Optimization Specialist</strong> with 10+ years of experience in inventory analytics, reporting automation, and operations optimization.
+            </p>
+            <p class="text-base md:text-lg text-slate-500 max-w-2xl mx-auto">
+                Open to full-time roles in <span class="text-accent">Chennai / Hyderabad</span> (Remote • Hybrid • Relocation OK) + Available for weekend consulting projects
             </p>
             
             <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#projects" class="px-8 py-3 bg-white text-midnight font-bold rounded-lg hover:scale-105 transition-transform inline-flex items-center justify-center gap-2">
-                    <span>View Case Studies</span>
-                    <i class="fas fa-arrow-right text-sm"></i>
+                <a href="#resume" class="px-8 py-4 bg-accent hover:bg-sky-400 text-midnight font-bold rounded-lg hover:scale-105 transition-all inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(56,189,248,0.3)]">
+                    <i class="fas fa-download text-sm"></i>
+                    <span>Download Resume</span>
                 </a>
-                <a href="#contact" class="px-8 py-3 glass text-white font-bold rounded-lg hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-2">
-                    <i class="fas fa-envelope text-sm"></i>
-                    <span>Contact Me</span>
+                <a href="#contact" class="px-8 py-4 glass text-white font-bold rounded-lg hover:bg-white/5 transition-colors inline-flex items-center justify-center gap-2 border border-white/10">
+                    <i class="fas fa-briefcase text-sm"></i>
+                    <span>Weekend Projects</span>
                 </a>
             </div>
         </header>
@@ -250,12 +309,12 @@
                 <div>
                     <h2 class="text-2xl md:text-3xl font-bold text-white mb-3 font-display">The Philosophy</h2>
                     <p class="text-slate-400 mb-6 text-base leading-relaxed">
-                        I believe in "Monk Mode" focus—deep, distraction-free work to solve complex problems. Whether it's optimizing a warehouse supply chain or automating 100 hours of manual data entry, I strive for clarity, efficiency, and measurable ROI.
+                        Great data analysis isn't about complex queries—it's about asking the right questions. I've spent 10+ years translating messy operational data into clear action plans for warehouse managers, procurement teams, and executives. My goal isn't to impress with technical skills; it's to make your team more efficient, one workflow at a time.
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag px-3 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20 font-mono">Systems Thinking</span>
+                        <span class="skill-tag px-3 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20 font-mono">Data Translation</span>
                         <span class="skill-tag px-3 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20 font-mono">Process Optimization</span>
-                        <span class="skill-tag px-3 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20 font-mono">Data-Driven</span>
+                        <span class="skill-tag px-3 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20 font-mono">Team Enablement</span>
                     </div>
                 </div>
             </div>
@@ -309,7 +368,7 @@
 
             <!-- Stats Cards -->
             <div class="glass rounded-2xl p-6 hover-card text-center scroll-reveal" style="animation-delay: 0.2s">
-                <div class="text-5xl font-bold text-accent mb-2 font-display">13+</div>
+                <div class="text-5xl font-bold text-accent mb-2 font-display">10+</div>
                 <div class="text-base text-slate-400">Years Experience</div>
                 <div class="mt-4 text-sm text-slate-500 font-mono">Supply Chain & Operations</div>
             </div>
@@ -343,6 +402,59 @@
             <div class="relative pl-8 border-l-4 border-accent/20">
                 <div class="timeline-progress"></div>
                 
+                <!-- Timeline Item 0: Current Status (2025) -->
+                <div class="mb-16 relative">
+                    <div class="absolute -left-10 w-4 h-4 rounded-full bg-success border-4 border-midnight animate-pulse"></div>
+                    <div class="glass rounded-xl p-8 hover-card border-2 border-accent/30">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white flex items-center gap-2">
+                                    <i class="fas fa-bullseye text-success"></i> 
+                                    2025 — Seeking Full-Time Role
+                                </h3>
+                                <p class="text-base text-slate-300">Open to New Opportunities</p>
+                            </div>
+                            <span class="font-mono text-success text-sm font-bold">AVAILABLE NOW</span>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-4">
+                            <div>
+                                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Target Roles</p>
+                                <ul class="list-none space-y-2 text-base">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
+                                        <span>Supply Chain Analyst</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
+                                        <span>Operations Analyst</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-success mt-1 mr-2"></i>
+                                        <span>Data Analyst (BI Focus)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Location Preference</p>
+                                <ul class="list-none space-y-2 text-slate-400 text-base">
+                                    <li><i class="fas fa-map-marker-alt text-accent mr-2"></i> <span class="text-white">Chennai, Hyderabad</span></li>
+                                    <li><i class="fas fa-home text-accent mr-2"></i> Remote / Hybrid OK</li>
+                                    <li><i class="fas fa-plane text-accent mr-2"></i> Open to Relocation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="terminal-input rounded-lg text-sm mt-4">
+                            <p class="text-slate-300 mb-2">
+                                <i class="fas fa-info-circle text-accent mr-2"></i>
+                                <strong class="text-white">Current Availability:</strong> Actively seeking full-time opportunities while available for select weekend consulting projects during the transition period.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Timeline Item 1: Freelance -->
                 <div class="mb-16 relative">
                     <div class="absolute -left-10 w-4 h-4 rounded-full bg-accent border-4 border-midnight"></div>
@@ -361,19 +473,19 @@
 
                         <div class="grid md:grid-cols-2 gap-6 mb-4">
                             <div>
-                                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Engagement Models</p>
+                                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Service Offerings</p>
                                 <ul class="list-none space-y-2 text-base">
                                     <li class="flex items-start">
                                         <i class="fas fa-caret-right text-slate-500 mt-1 mr-2"></i>
-                                        <span><strong>Fixed-Scope Analytics:</strong> Data cleaning & SQL queries.</span>
+                                        <span><strong>Analytics:</strong> Data cleaning & SQL queries</span>
                                     </li>
                                     <li class="flex items-start">
                                         <i class="fas fa-caret-right text-slate-500 mt-1 mr-2"></i>
-                                        <span><strong>Automation:</strong> One-time workflow scripts (AHK/Python/n8n).</span>
+                                        <span><strong>Automation:</strong> Workflow scripts (Python/n8n)</span>
                                     </li>
                                     <li class="flex items-start">
                                         <i class="fas fa-caret-right text-slate-500 mt-1 mr-2"></i>
-                                        <span><strong>Dashboards:</strong> <span class="text-white border-b border-accent/50">Prototypes</span> & KPI modeling.</span>
+                                        <span><strong>Dashboards:</strong> BI prototypes & KPI modeling</span>
                                     </li>
                                 </ul>
                             </div>
@@ -395,7 +507,6 @@
                             <span class="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400 hover:text-accent hover:border-accent/30 transition-colors cursor-default">Python</span>
                             <span class="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400 hover:text-accent hover:border-accent/30 transition-colors cursor-default">AutoHotkey</span>
                             <span class="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400 hover:text-accent hover:border-accent/30 transition-colors cursor-default">n8n Automation</span>
-                            <span class="text-xs bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400 hover:text-accent hover:border-accent/30 transition-colors cursor-default">Data Cleaning</span>
                         </div>
                     </div>
                 </div>
@@ -406,61 +517,153 @@
                     <div class="glass rounded-xl p-8 hover-card">
                         <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white">Jio — Assistant Manager (Data)</h3>
-                                <p class="text-base text-slate-300">Supply Chain Optimization Specialist</p>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white">Reliance Jio — Data Analyst | Supply Chain Optimization</h3>
+                                <p class="text-base text-slate-300">Assistant Manager, Service Operations</p>
                             </div>
-                            <span class="font-mono text-slate-500 text-sm">2016 – 2024</span>
+                            <span class="font-mono text-slate-500 text-sm">Sep 2016 – Feb 2024</span>
                         </div>
                         
                         <p class="text-slate-400 mb-4 max-w-3xl text-base leading-relaxed">
-                            Orchestrated supply chain analytics for 600+ retail outlets. Managed inventory planning, stock distribution, and demand alignment using advanced Excel/SQL pipelines.
+                            Orchestrated supply chain analytics for 600+ retail outlets across 89 service locations. Managed inventory planning, stock distribution, and demand alignment using advanced Excel/SQL pipelines and Power BI dashboards.
                         </p>
 
                         <div class="terminal-input rounded-lg">
-                            <p class="mb-3 text-white/50 font-mono text-sm">// Executed_Achievements_Log:</p>
+                            <p class="mb-3 text-white/50 font-mono text-sm">// Key_Achievements_Log:</p>
                             <ul class="list-none space-y-3 text-base text-slate-400">
                                 <li class="flex items-start">
-                                    <i class="fas fa-check text-success mt-1 mr-3 text-xs"></i>
+                                    <i class="fas fa-trophy text-warning mt-1 mr-3 text-xs"></i>
                                     <span>
                                         <strong class="text-white">Inventory Optimization:</strong> Reduced non-moving parts by <span class="text-accent">₹1.7M</span> in 2 months (Ranked #1 in State).
                                     </span>
                                 </li>
                                 <li class="flex items-start">
-                                    <i class="fas fa-check text-success mt-1 mr-3 text-xs"></i>
+                                    <i class="fas fa-clock text-success mt-1 mr-3 text-xs"></i>
                                     <span>
-                                        <strong class="text-white">Efficiency ROI:</strong> Automated weekly MIS reports using VBA & Power Query, saving <span class="text-accent">10+ manual hours/week</span>.
+                                        <strong class="text-white">Efficiency ROI:</strong> Automated weekly MIS reports using VBA & Power Query, saving <span class="text-accent">40+ manual hours/month</span>.
                                     </span>
                                 </li>
                                 <li class="flex items-start">
-                                    <i class="fas fa-check text-success mt-1 mr-3 text-xs"></i>
+                                    <i class="fas fa-chart-line text-success mt-1 mr-3 text-xs"></i>
                                     <span>
                                         <strong class="text-white">Process Improvement:</strong> Accelerated escalation resolution, boosting Customer Satisfaction (CSAT) from <span class="text-accent">72% → 95%</span>.
                                     </span>
                                 </li>
                                 <li class="flex items-start">
-                                    <i class="fas fa-check text-success mt-1 mr-3 text-xs"></i>
+                                    <i class="fas fa-code text-purple-400 mt-1 mr-3 text-xs"></i>
                                     <span>
-                                        <strong class="text-white">Technical QA:</strong> Debugged AI-based automation scripts, identifying logic errors to restore output accuracy.
+                                        <strong class="text-white">Technical QA:</strong> Debugged AI-based automation scripts using Python, identifying logic errors to restore output accuracy.
                                     </span>
                                 </li>
                             </ul>
                             <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-2">
                                 <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">SAP CRM</span>
-                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">AutoHotkey Automation</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Power BI Dashboards</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Python Automation</span>
                                 <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Excel VBA</span>
                                 <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Power Query</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">AutoHotkey</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Timeline Item 3: Lucas TVS -->
-                <div class="mb-12 relative">
+                <!-- Timeline Item 3: LG Support -->
+                <div class="mb-16 relative">
                     <div class="absolute -left-10 w-4 h-4 rounded-full bg-accent/40 border-4 border-midnight"></div>
                     <div class="glass rounded-xl p-8 hover-card">
                         <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                            <h3 class="text-2xl md:text-3xl font-bold text-white">Lucas TVS — Excel Analyst</h3>
-                            <span class="font-mono text-slate-500 text-sm">2010 – 2012</span>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white">LG Support Center — Data Reporting & Technical Support</h3>
+                            <span class="font-mono text-slate-500 text-sm">Jun 2013 – May 2016</span>
+                        </div>
+                        
+                        <p class="text-slate-400 mb-4 max-w-3xl text-base leading-relaxed">
+                            Tracked 500+ mobile service cases monthly using Excel, categorized by issue type and turnaround time. Created dynamic lookup tools to accelerate service parts availability and reduce delays.
+                        </p>
+                        
+                        <div class="terminal-input rounded-lg">
+                            <p class="mb-3 text-white/50 font-mono text-sm">// Role_Highlights:</p>
+                            
+                            <ul class="list-none space-y-3 text-base text-slate-400">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-slate-600 mt-1 mr-3 text-xs"></i>
+                                    <span>
+                                        <strong class="text-white">Service Operations:</strong> Managed daily case tracking and escalation resolution for mobile device repairs.
+                                    </span>
+                                </li>
+                                
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-slate-600 mt-1 mr-3 text-xs"></i>
+                                    <span>
+                                        <strong class="text-white">Process Standardization:</strong> Built Excel-based SOPs and training documentation for field technicians.
+                                    </span>
+                                </li>
+                                
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-slate-600 mt-1 mr-3 text-xs"></i>
+                                    <span>
+                                        <strong class="text-white">Trend Analysis:</strong> Used pivot tables to identify recurring issues and improve response strategies.
+                                    </span>
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Advanced Excel</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Service Operations</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Case Management</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Process Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4: Whirlpool -->
+                <div class="mb-16 relative">
+                    <div class="absolute -left-10 w-4 h-4 rounded-full bg-accent/30 border-4 border-midnight"></div>
+                    <div class="glass rounded-xl p-8 hover-card">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white">Whirlpool Stores — Part Coordinator & Data Analyst</h3>
+                            <span class="font-mono text-slate-500 text-sm">Sep 2012 – Apr 2013</span>
+                        </div>
+                        
+                        <p class="text-slate-400 mb-4 max-w-3xl text-base leading-relaxed">
+                            Managed inventory using Excel-based stock ledgers and coordinated with vendors to maintain optimal supply levels. Built and maintained daily Excel dashboards to monitor vendor-wise stock compliance and fulfillment.
+                        </p>
+                        
+                        <div class="terminal-input rounded-lg">
+                            <p class="mb-3 text-white/50 font-mono text-sm">// Core_Responsibilities:</p>
+                            
+                            <ul class="list-none space-y-3 text-base text-slate-400">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-slate-600 mt-1 mr-3 text-xs"></i>
+                                    <span>
+                                        <strong class="text-white">Inventory Management:</strong> Maintained real-time stock records and coordinated vendor replenishments.
+                                    </span>
+                                </li>
+                                
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-slate-600 mt-1 mr-3 text-xs"></i>
+                                    <span>
+                                        <strong class="text-white">Performance Tracking:</strong> Increased customer satisfaction from 75% to 91% by reducing stock issues through precise data tracking.
+                                    </span>
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap gap-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Excel Dashboards</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Vendor Management</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Stock Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5: Lucas TVS -->
+                <div class="mb-12 relative">
+                    <div class="absolute -left-10 w-4 h-4 rounded-full bg-accent/20 border-4 border-midnight"></div>
+                    <div class="glass rounded-xl p-8 hover-card">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white">Lucas TVS — Reporting Trainee | Interfactory Transport Dept</h3>
+                            <span class="font-mono text-slate-500 text-sm">Jul 2010 – Jun 2012</span>
                         </div>
                         
                         <p class="text-slate-400 mb-4 max-w-3xl text-base leading-relaxed">
@@ -468,7 +671,7 @@
                         </p>
                         
                         <div class="terminal-input rounded-lg">
-                            <p class="mb-3 text-white/50 font-mono text-sm">// Early_Career_Log:</p>
+                            <p class="mb-3 text-white/50 font-mono text-sm">// Early_Career_Foundation:</p>
                             
                             <ul class="list-none space-y-3 text-base text-slate-400">
                                 <li class="flex items-start">
@@ -481,14 +684,14 @@
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-slate-600 mt-1 mr-3 text-xs"></i>
                                     <span>
-                                        <strong class="text-white">Planning Support:</strong> Provided accurate material flow analysis to the Planning Department to help align production schedules with demand.
+                                        <strong class="text-white">Planning Support:</strong> Provided accurate material flow analysis to align production schedules with demand.
                                     </span>
                                 </li>
                                 
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-slate-600 mt-1 mr-3 text-xs"></i>
                                     <span>
-                                        <strong class="text-white">System Migration:</strong> Assisted in digitizing manual paper-based records into structured spreadsheets for historical tracking.
+                                        <strong class="text-white">System Migration:</strong> Assisted in digitizing manual paper-based records into structured spreadsheets.
                                     </span>
                                 </li>
                             </ul>
@@ -498,7 +701,6 @@
                                 <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Production Planning</span>
                                 <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">MIS Reporting</span>
                                 <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Advanced Excel</span>
-                                <span class="text-xs font-mono bg-white/5 border border-white/10 px-2 py-1 rounded text-slate-400">Cross-Functional Collaboration</span>
                             </div>
                         </div>
                     </div>
@@ -507,17 +709,129 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="mb-24 scroll-reveal">
+        <!-- Resume Section -->
+        <section id="resume" class="mb-24 scroll-reveal">
             <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-10 flex items-center">
-                <span class="w-8 h-[2px] bg-accent mr-4"></span> Featured Work
+                <span class="w-8 h-[2px] bg-accent mr-4"></span> Resume / CV
             </h2>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass rounded-2xl p-8 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Download Options</h3>
+                        <p class="text-slate-400 mb-6 text-base leading-relaxed">
+                            Get my complete resume with detailed work history, technical skills, certifications, and project portfolio links.
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <a href="./Resume_Yoghesh_VM.pdf" download class="flex items-center gap-3 p-4 bg-accent/10 hover:bg-accent/20 border border-accent/30 rounded-lg transition-all group">
+                                <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-file-pdf text-accent text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="font-bold text-white">Standard Resume (PDF)</p>
+                                    <p class="text-sm text-slate-400">ATS-friendly format</p>
+                                </div>
+                                <i class="fas fa-download text-accent"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Quick Overview</h3>
+                        <div class="space-y-4 text-base">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-briefcase text-accent mt-1"></i>
+                                <div>
+                                    <p class="text-white font-bold">Experience</p>
+                                    <p class="text-slate-400">10+ years in Supply Chain Analytics & Operations</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-graduation-cap text-accent mt-1"></i>
+                                <div>
+                                    <p class="text-white font-bold">Education</p>
+                                    <p class="text-slate-400">Diploma in Electrical & Electronics Engineering</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-certificate text-accent mt-1"></i>
+                                <div>
+                                    <p class="text-white font-bold">Certifications</p>
+                                    <p class="text-slate-400">Power BI, Excel Advanced, SQL (Basic)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-code text-accent mt-1"></i>
+                                <div>
+                                    <p class="text-white font-bold">Core Skills</p>
+                                    <p class="text-slate-400">SQL, Power BI, Python, Excel VBA, AutoHotkey, n8n</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 pt-6">
+                    <h3 class="text-xl font-bold text-white mb-4">Key Achievements Snapshot</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/10">
+                            <div class="text-2xl font-bold text-warning mb-1">₹1.7M</div>
+                            <p class="text-sm text-slate-400">Cost savings through inventory optimization</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/10">
+                            <div class="text-2xl font-bold text-success mb-1">72% → 95%</div>
+                            <p class="text-sm text-slate-400">Customer satisfaction improvement</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/10">
+                            <div class="text-2xl font-bold text-accent mb-1">40+ hrs/mo</div>
+                            <p class="text-sm text-slate-400">Time saved through automation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section with Filter -->
+        <section id="projects" class="mb-24 scroll-reveal">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-white flex items-center mb-4 md:mb-0">
+                    <span class="w-8 h-[2px] bg-accent mr-4"></span> Project Portfolio
+                </h2>
                 
-                <!-- Project 1 -->
-                <div class="glass rounded-xl overflow-hidden group border border-white/5 hover:border-accent/50 transition-all flex flex-col">
-                    <div class="h-40 bg-gradient-to-br from-panel to-slate-900 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-lg border border-white/10 text-sm font-mono transition-all" data-filter="all">
+                        All Projects
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg border border-white/10 text-sm font-mono text-slate-400 transition-all" data-filter="powerbi">
+                        Power BI
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg border border-white/10 text-sm font-mono text-slate-400 transition-all" data-filter="python">
+                        Python
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg border border-white/10 text-sm font-mono text-slate-400 transition-all" data-filter="autohotkey">
+                        AutoHotkey
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg border border-white/10 text-sm font-mono text-slate-400 transition-all" data-filter="n8n">
+                        n8n
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg border border-white/10 text-sm font-mono text-slate-400 transition-all" data-filter="sql">
+                        SQL
+                    </button>
+                </div>
+            </div>
+
+            <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- ========================================= -->
+                <!-- PROJECT CARD TEMPLATE - COPY FROM HERE   -->
+                <!-- ========================================= -->
+                
+                <!-- Project 1: SQL ETL Pipeline -->
+                <div class="project-card glass rounded-xl overflow-hidden group border border-white/5 hover:border-accent/50 transition-all flex flex-col" data-category="sql">
+                    <div class="h-48 bg-gradient-to-br from-panel to-slate-900 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+                        <!-- Replace this div with: <img src="./projects/your-image.png" alt="Project Name" class="w-full h-full object-cover" /> -->
                         <div class="absolute inset-0 bg-accent/5 transform -skew-y-6 group-hover:skew-y-0 transition-transform duration-500"></div>
                         <i class="fas fa-database text-4xl text-slate-700 group-hover:text-accent transition-colors duration-300 relative z-10"></i>
                         <div class="absolute bottom-2 right-2 text-[10px] text-slate-600 font-mono">ID: PROJ_001</div>
@@ -534,25 +848,25 @@
                         </div>
                         
                         <div class="mt-4 flex gap-2">
-                            <button class="text-sm text-accent hover:text-accent/80 transition-colors font-mono flex items-center gap-1">
+                            <a href="#" class="text-sm text-accent hover:text-accent/80 transition-colors font-mono flex items-center gap-1">
                                 <i class="fab fa-github"></i> View Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="glass rounded-xl overflow-hidden group border border-white/5 hover:border-accent/50 transition-all flex flex-col">
-                    <div class="h-40 bg-gradient-to-br from-panel to-slate-900 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+                <!-- Project 2: Power BI Dashboard -->
+                <div class="project-card glass rounded-xl overflow-hidden group border border-white/5 hover:border-accent/50 transition-all flex flex-col" data-category="powerbi">
+                    <div class="h-48 bg-gradient-to-br from-panel to-slate-900 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
                         <div class="absolute inset-0 bg-purple-500/5 transform -skew-y-6 group-hover:skew-y-0 transition-transform duration-500"></div>
                         <i class="fas fa-chart-pie text-4xl text-slate-700 group-hover:text-accent transition-colors duration-300 relative z-10"></i>
                         <div class="absolute bottom-2 right-2 px-2 py-1 bg-accent/10 border border-accent/20 rounded text-[10px] text-accent font-bold tracking-wider">
-                            CASE STUDY / PROTOTYPE
+                            PROTOTYPE
                         </div>
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-white text-xl mb-2">KPI Operations Dashboard</h3>
-                        <p class="text-sm font-mono text-accent mb-4">DAX • Modeling • Simulation</p>
+                        <p class="text-sm font-mono text-accent mb-4">Power BI • DAX • Modeling</p>
                         
                         <div class="terminal-input text-sm p-3 mt-auto">
                             <p class="mb-2 text-slate-300">
@@ -562,23 +876,23 @@
                         </div>
                         
                         <div class="mt-4 flex gap-2">
-                            <button class="text-sm text-accent hover:text-accent/80 transition-colors font-mono flex items-center gap-1">
+                            <a href="#" class="text-sm text-accent hover:text-accent/80 transition-colors font-mono flex items-center gap-1">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="glass rounded-xl overflow-hidden group border border-white/5 hover:border-accent/50 transition-all flex flex-col">
-                    <div class="h-40 bg-gradient-to-br from-panel to-slate-900 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
+                <!-- Project 3: AutoHotkey Automation -->
+                <div class="project-card glass rounded-xl overflow-hidden group border border-white/5 hover:border-accent/50 transition-all flex flex-col" data-category="autohotkey">
+                    <div class="h-48 bg-gradient-to-br from-panel to-slate-900 flex items-center justify-center border-b border-white/5 relative overflow-hidden">
                         <div class="absolute inset-0 bg-success/5 transform -skew-y-6 group-hover:skew-y-0 transition-transform duration-500"></div>
                         <i class="fas fa-robot text-4xl text-slate-700 group-hover:text-accent transition-colors duration-300 relative z-10"></i>
                         <div class="absolute bottom-2 right-2 text-[10px] text-slate-600 font-mono">ID: PROJ_003</div>
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-white text-xl mb-2">Invoice Auto-Processor</h3>
-                        <p class="text-sm font-mono text-accent mb-4">AutoHotkey • Python</p>
+                        <p class="text-sm font-mono text-accent mb-4">AutoHotkey • Automation</p>
                         
                         <div class="terminal-input text-sm p-3 mt-auto">
                             <p class="mb-2 text-slate-300">
@@ -588,13 +902,32 @@
                         </div>
                         
                         <div class="mt-4 flex gap-2">
-                            <button class="text-sm text-accent hover:text-accent/80 transition-colors font-mono flex items-center gap-1">
+                            <a href="#" class="text-sm text-accent hover:text-accent/80 transition-colors font-mono flex items-center gap-1">
                                 <i class="fab fa-github"></i> View Code
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ========================================= -->
+                <!-- PROJECT CARD TEMPLATE - COPY TO HERE     -->
+                <!-- ========================================= -->
+
+                <!-- ADD MORE PROJECTS BY COPYING THE TEMPLATE ABOVE -->
+                <!-- Remember to:
+                     1. Change data-category="sql|powerbi|python|autohotkey|n8n"
+                     2. Replace the icon/image
+                     3. Update title, description, tech stack
+                     4. Add your GitHub/Demo links
+                -->
+
+            </div>
+
+            <!-- Empty State Message (shown when no projects match filter) -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <i class="fas fa-folder-open text-6xl text-slate-700 mb-4"></i>
+                <p class="text-slate-500 text-lg">No projects found in this category yet.</p>
+                <p class="text-slate-600 text-sm mt-2">More projects coming soon!</p>
             </div>
         </section>
 
@@ -641,13 +974,16 @@
 
         <!-- Contact Section -->
         <section id="contact" class="text-center max-w-2xl mx-auto py-12 scroll-reveal">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Optimize Your Operations?</h2>
-            <p class="text-slate-400 mb-8 text-base md:text-lg leading-relaxed">
-                I am currently accepting new freelance projects for Q2 2025. Whether it's complex data analysis, dashboard creation, or workflow automation, let's discuss how we can save you time and increase efficiency.
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Let's Connect</h2>
+            <p class="text-slate-400 mb-4 text-base md:text-lg leading-relaxed">
+                <strong>Actively seeking full-time opportunities</strong> as a Supply Chain Analyst or Operations Analyst in Chennai/Hyderabad (Remote/Hybrid/Relocation OK).
+            </p>
+            <p class="text-slate-400 mb-8 text-base leading-relaxed">
+                Also available for select weekend consulting projects involving data analysis, dashboard creation, or workflow automation.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="mailto:wsnh.code5621@gmail.com" class="px-8 py-4 bg-accent hover:bg-sky-400 text-midnight font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(56,189,248,0.3)] inline-flex items-center justify-center gap-2 text-base">
-                    <i class="fas fa-envelope"></i> Start a Project
+                    <i class="fas fa-envelope"></i> Email Me
                 </a>
                 <a href="https://www.linkedin.com/in/yoghesh-analytics/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-surface hover:bg-slate-700 text-white font-medium rounded-lg border border-white/10 transition-colors inline-flex items-center justify-center gap-2 text-base">
                     <i class="fab fa-linkedin"></i> LinkedIn
@@ -668,7 +1004,7 @@
     <!-- Footer -->
     <footer class="text-center py-8 border-t border-white/5 mt-12 bg-black/20">
         <p class="text-sm text-slate-600 font-mono">
-            &copy; 2025 Yoghesh. Data Analyst & Business Automation. All Rights Reserved.
+            &copy; 2025 Yoghesh VM. Data Analyst & Supply Chain Optimization. All Rights Reserved.
         </p>
         <p class="text-sm text-slate-700 font-mono mt-2">
             Built with precision. Optimized for impact.
@@ -740,6 +1076,45 @@
                         top: targetPosition,
                         behavior: 'smooth'
                     });
+                }
+            });
+        });
+
+        // ==================================
+        // PROJECT FILTER FUNCTIONALITY
+        // ==================================
+        
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        const emptyState = document.getElementById('emptyState');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Filter projects
+                let visibleCount = 0;
+                
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || category === filterValue) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                // Show/hide empty state
+                if (visibleCount === 0) {
+                    emptyState.classList.remove('hidden');
+                } else {
+                    emptyState.classList.add('hidden');
                 }
             });
         });

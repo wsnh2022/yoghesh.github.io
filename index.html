@@ -85,6 +85,22 @@
             color: #e2e8f0;
             background-image: radial-gradient(#1f2937 1px, transparent 1px);
             background-size: 40px 40px;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Noise Overlay */
+        .noise::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 9999;
+            filter: contrast(120%) brightness(120%);
         }
 
         /* Hero Background Image */
@@ -234,7 +250,7 @@
     </style>
 </head>
 
-<body class="min-h-screen selection:bg-accent selection:text-midnight overflow-x-hidden">
+<body class="min-h-screen selection:bg-accent selection:text-midnight overflow-x-hidden noise">
 
     <!-- Hero Background Image -->
     <div class="hero-background"></div>
@@ -261,19 +277,19 @@
 
                 <div class="flex gap-4 ml-4 pl-4 border-l border-white/10">
                     <a href="https://www.linkedin.com/in/yoghesh-analytics/" target="_blank" rel="noopener noreferrer"
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-[#0077b5]/20 text-[#0077b5]/50 hover:text-[#0077b5] border border-white/10 hover:border-[#0077b5]/50 transition-all transform hover:scale-110 group"
+                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-transparent hover:bg-[#0077b5]/10 text-[#0077b5] border-2 border-[#0077b5] transition-all transform hover:scale-110 group"
                         title="LinkedIn">
                         <i class="fab fa-linkedin text-lg group-hover:drop-shadow-[0_0_8px_#0077b5]"></i>
                     </a>
                     <a href="https://github.com/wsnh2022" target="_blank" rel="noopener noreferrer"
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white/50 hover:text-white border border-white/10 hover:border-white/30 transition-all transform hover:scale-110 group"
+                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-transparent hover:bg-white/10 text-white border-2 border-white transition-all transform hover:scale-110 group"
                         title="GitHub">
                         <i class="fab fa-github text-lg group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"></i>
                     </a>
                     <a href="https://www.instagram.com/datacraft.yogi/" target="_blank" rel="noopener noreferrer"
-                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-gradient-to-tr hover:from-[#f09433]/20 hover:via-[#dc2743]/20 hover:to-[#bc1888]/20 text-[#E1306C]/60 hover:text-white border border-white/10 hover:border-white/30 transition-all transform hover:scale-110 group"
+                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-transparent hover:bg-[#E1306C]/10 text-[#E1306C] border-2 border-[#E1306C] transition-all transform hover:scale-110 group"
                         title="Instagram">
-                        <i class="fab fa-instagram text-lg group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"></i>
+                        <i class="fab fa-instagram text-lg group-hover:drop-shadow-[0_0_8px_#E1306C]"></i>
                     </a>
                 </div>
             </div>
@@ -294,17 +310,17 @@
 
                 <div class="flex gap-4 pt-4 border-t border-white/10">
                     <a href="https://www.linkedin.com/in/yoghesh-analytics/" target="_blank" rel="noopener noreferrer"
-                        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 text-[#0077b5]/50 hover:text-[#0077b5] border border-white/10 transition-all"
+                        class="w-12 h-12 flex items-center justify-center rounded-xl bg-transparent text-[#0077b5] border-2 border-[#0077b5] transition-all"
                         title="LinkedIn">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
                     <a href="https://github.com/wsnh2022" target="_blank" rel="noopener noreferrer"
-                        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 text-white/50 hover:text-white border border-white/10 transition-all"
+                        class="w-12 h-12 flex items-center justify-center rounded-xl bg-transparent text-white border-2 border-white transition-all"
                         title="GitHub">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
                     <a href="https://www.instagram.com/datacraft.yogi/" target="_blank" rel="noopener noreferrer"
-                        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 text-[#E1306C]/60 hover:text-white border border-white/10 transition-all"
+                        class="w-12 h-12 flex items-center justify-center rounded-xl bg-transparent text-[#E1306C] border-2 border-[#E1306C] transition-all"
                         title="Instagram">
                         <i class="fab fa-instagram text-2xl"></i>
                     </a>
@@ -354,10 +370,12 @@
                     <span>Weekend Projects</span>
                 </a>
             </div>
+
+
         </header>
 
         <!-- Overview Section -->
-        <section id="overview" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-24">
+        <section id="overview" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-32">
 
             <!-- Philosophy Card -->
             <div
@@ -372,13 +390,13 @@
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span
-                            class="skill-tag px-3 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20 font-mono">Data
+                            class="skill-tag px-3 py-1 bg-transparent text-accent border-2 border-accent rounded-full text-xs font-bold uppercase transition-all">Data
                             Translation</span>
                         <span
-                            class="skill-tag px-3 py-1 bg-success/10 text-success text-xs rounded-full border border-success/20 font-mono">Process
+                            class="skill-tag px-3 py-1 bg-transparent text-success border-2 border-success rounded-full text-xs font-bold uppercase transition-all">Process
                             Optimization</span>
                         <span
-                            class="skill-tag px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full border border-purple-500/20 font-mono">Team
+                            class="skill-tag px-3 py-1 bg-transparent text-purple-400 border-2 border-purple-400 rounded-full text-xs font-bold uppercase transition-all">Team
                             Enablement</span>
                     </div>
                 </div>
@@ -394,23 +412,23 @@
                         </h3>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="skill-tag px-2 py-1 bg-[#336791]/10 text-[#336791]/70 hover:text-[#336791] border border-[#336791]/20 hover:border-[#336791]/50 text-xs rounded-md font-mono transition-all">SQL</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-[#38bdf8] border-2 border-[#38bdf8] text-xs font-bold rounded-md transition-all">SQL</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#00758f]/10 text-[#00758f]/70 hover:text-[#00758f] border border-[#00758f]/20 hover:border-[#00758f]/50 text-xs rounded-md font-mono transition-all">MySQL
+                                class="skill-tag px-2 py-1 bg-transparent text-[#00d8ff] border-2 border-[#00d8ff] text-xs font-bold rounded-md transition-all">MySQL
                                 / PostgreSQL</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#f2c811]/10 text-[#f2c811]/80 hover:text-[#f2c811] border border-[#f2c811]/20 hover:border-[#f2c811]/50 text-xs rounded-md font-mono transition-all">Power
+                                class="skill-tag px-2 py-1 bg-transparent text-[#fbbf24] border-2 border-[#fbbf24] text-xs font-bold rounded-md transition-all">Power
                                 BI</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#217346]/10 text-[#217346]/70 hover:text-[#217346] border border-[#217346]/20 hover:border-[#217346]/50 text-xs rounded-md font-mono transition-all">Excel</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-[#4ade80] border-2 border-[#4ade80] text-xs font-bold rounded-md transition-all">Excel</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#f2c811]/10 text-[#f2c811]/80 hover:text-[#f2c811] border border-[#f2c811]/20 hover:border-[#f2c811]/50 text-xs rounded-md font-mono transition-all">DAX</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-[#fbbf24] border-2 border-[#fbbf24] text-xs font-bold rounded-md transition-all">DAX</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#3776ab]/10 text-[#3776ab]/70 hover:text-[#3776ab] border border-[#3776ab]/20 hover:border-[#3776ab]/50 text-xs rounded-md font-mono transition-all">Python</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-[#60a5fa] border-2 border-[#60a5fa] text-xs font-bold rounded-md transition-all">Python</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#f37626]/10 text-[#f37626]/70 hover:text-[#f37626] border border-[#f37626]/20 hover:border-[#f37626]/50 text-xs rounded-md font-mono transition-all">Jupyter</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-[#fb923c] border-2 border-[#fb923c] text-xs font-bold rounded-md transition-all">Jupyter</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#f9ab00]/10 text-[#f9ab00]/70 hover:text-[#f9ab00] border border-[#f9ab00]/20 hover:border-[#f9ab00]/50 text-xs rounded-md font-mono transition-all">Google
+                                class="skill-tag px-2 py-1 bg-transparent text-[#fcd34d] border-2 border-[#fcd34d] text-xs font-bold rounded-md transition-all">Google
                                 Colab</span>
                         </div>
                     </div>
@@ -420,17 +438,17 @@
                         </h3>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="skill-tag px-2 py-1 bg-[#10b981]/10 text-[#10b981]/70 hover:text-[#10b981] border border-[#10b981]/20 hover:border-[#10b981]/50 text-xs rounded-md font-mono transition-all">ETL
+                                class="skill-tag px-2 py-1 bg-transparent text-[#4ade80] border-2 border-[#4ade80] text-xs font-bold rounded-md transition-all">ETL
                                 Processes</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#38bdf8]/10 text-[#38bdf8]/70 hover:text-[#38bdf8] border border-[#38bdf8]/20 hover:border-[#38bdf8]/50 text-xs rounded-md font-mono transition-all">Data
+                                class="skill-tag px-2 py-1 bg-transparent text-[#38bdf8] border-2 border-[#38bdf8] text-xs font-bold rounded-md transition-all">Data
                                 Modeling</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-white/10 text-white/60 hover:text-white border border-white/10 hover:border-white/30 text-xs rounded-md font-mono transition-all">Git/GitHub</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-white border-2 border-white text-xs font-bold rounded-md transition-all">Git/GitHub</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#2b579a]/10 text-[#2b579a]/70 hover:text-[#2b579a] border border-[#2b579a]/20 hover:border-[#2b579a]/50 text-xs rounded-md font-mono transition-all">VBA</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-[#60a5fa] border-2 border-[#60a5fa] text-xs font-bold rounded-md transition-all">VBA</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#64b5f6]/10 text-[#64b5f6]/70 hover:text-[#64b5f6] border border-[#64b5f6]/20 hover:border-[#64b5f6]/50 text-xs rounded-md font-mono transition-all">AutoHotkey</span>
+                                class="skill-tag px-2 py-1 bg-transparent text-[#38bdf8] border-2 border-[#38bdf8] text-xs font-bold rounded-md transition-all">AutoHotkey</span>
                         </div>
                     </div>
                     <div>
@@ -439,23 +457,22 @@
                         </h3>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="skill-tag px-2 py-1 bg-[#ff6d5a]/10 text-[#ff6d5a]/70 hover:text-[#ff6d5a] border border-[#ff6d5a]/20 hover:border-[#ff6d5a]/50 text-xs rounded-md font-mono transition-all">n8n
+                                class="skill-tag px-2 py-1 bg-transparent text-[#f87171] border-2 border-[#f87171] text-xs font-bold rounded-md transition-all">n8n
                                 Flows</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#38bdf8]/10 text-[#38bdf8]/70 hover:text-[#38bdf8] border border-[#38bdf8]/20 hover:border-[#38bdf8]/50 text-xs rounded-md font-mono transition-all">API
+                                class="skill-tag px-2 py-1 bg-transparent text-[#38bdf8] border-2 border-[#38bdf8] text-xs font-bold rounded-md transition-all">API
                                 Workflows</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#818cf8]/10 text-[#818cf8]/70 hover:text-[#818cf8] border border-[#818cf8]/20 hover:border-[#818cf8]/50 text-xs rounded-md font-mono transition-all">System
+                                class="skill-tag px-2 py-1 bg-transparent text-[#60a5fa] border-2 border-[#60a5fa] text-xs font-bold rounded-md transition-all">System
                                 Integration</span>
                             <span
-                                class="skill-tag px-2 py-1 bg-[#ec4899]/10 text-[#ec4899]/70 hover:text-[#ec4899] border border-[#ec4899]/20 hover:border-[#ec4899]/50 text-xs rounded-md font-mono transition-all">SOP
+                                class="skill-tag px-2 py-1 bg-transparent text-[#f472b6] border-2 border-[#f472b6] text-xs font-bold rounded-md transition-all">SOP
                                 Systems</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Stats Cards -->
             <div class="glass rounded-2xl p-6 hover-card text-center scroll-reveal" style="animation-delay: 0.2s">
                 <div class="text-5xl font-bold text-accent mb-2 font-display">10+</div>
                 <div class="text-base text-slate-400">Years Experience</div>
@@ -483,7 +500,7 @@
         </section>
 
         <!-- Experience Timeline Section -->
-        <section id="experience" class="mb-24 scroll-reveal">
+        <section id="experience" class="mb-32 scroll-reveal">
             <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-10 flex items-center">
                 <span class="w-8 h-[2px] bg-accent mr-4"></span> Career Timeline
             </h2>
@@ -970,7 +987,7 @@
         </section>
 
         <!-- Projects Section with Filter -->
-        <section id="projects" class="mb-24 scroll-reveal">
+        <section id="projects" class="mb-32 scroll-reveal">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
                 <h2 class="text-3xl md:text-4xl font-display font-bold text-white flex items-center mb-4 md:mb-0">
                     <span class="w-8 h-[2px] bg-accent mr-4"></span> Project Portfolio
@@ -979,32 +996,32 @@
                 <!-- Filter Buttons -->
                 <div class="flex flex-wrap gap-2">
                     <button
-                        class="filter-btn active px-4 py-2 rounded-lg border border-accent/30 bg-accent/10 text-accent text-sm font-mono transition-all hover:bg-accent/20"
+                        class="filter-btn active px-4 py-2 rounded-lg border-2 border-accent bg-accent/10 text-accent text-sm font-bold uppercase transition-all hover:bg-accent/20"
                         data-filter="all">
                         All Projects
                     </button>
                     <button
-                        class="filter-btn px-4 py-2 rounded-lg border border-[#f2c811]/20 bg-[#f2c811]/5 text-[#f2c811]/60 text-sm font-mono transition-all hover:bg-[#f2c811]/10 hover:text-[#f2c811]"
+                        class="filter-btn px-4 py-2 rounded-lg border-2 border-[#fbbf24] bg-transparent text-[#fbbf24] text-sm font-bold uppercase transition-all hover:bg-[#fbbf24]/10"
                         data-filter="powerbi">
                         Power BI
                     </button>
                     <button
-                        class="filter-btn px-4 py-2 rounded-lg border border-[#3776ab]/20 bg-[#3776ab]/5 text-[#3776ab]/60 text-sm font-mono transition-all hover:bg-[#3776ab]/10 hover:text-[#3776ab]"
+                        class="filter-btn px-4 py-2 rounded-lg border-2 border-[#60a5fa] bg-transparent text-[#60a5fa] text-sm font-bold uppercase transition-all hover:bg-[#60a5fa]/10"
                         data-filter="python">
                         Python
                     </button>
                     <button
-                        class="filter-btn px-4 py-2 rounded-lg border border-[#64b5f6]/20 bg-[#64b5f6]/5 text-[#64b5f6]/60 text-sm font-mono transition-all hover:bg-[#64b5f6]/10 hover:text-[#64b5f6]"
+                        class="filter-btn px-4 py-2 rounded-lg border-2 border-[#38bdf8] bg-transparent text-[#38bdf8] text-sm font-bold uppercase transition-all hover:bg-[#38bdf8]/10"
                         data-filter="autohotkey">
                         AutoHotkey
                     </button>
                     <button
-                        class="filter-btn px-4 py-2 rounded-lg border border-[#ff6d5a]/20 bg-[#ff6d5a]/5 text-[#ff6d5a]/60 text-sm font-mono transition-all hover:bg-[#ff6d5a]/10 hover:text-[#ff6d5a]"
+                        class="filter-btn px-4 py-2 rounded-lg border-2 border-[#f87171] bg-transparent text-[#f87171] text-sm font-bold uppercase transition-all hover:bg-[#f87171]/10"
                         data-filter="n8n">
                         n8n
                     </button>
                     <button
-                        class="filter-btn px-4 py-2 rounded-lg border border-[#336791]/20 bg-[#336791]/5 text-[#336791]/60 text-sm font-mono transition-all hover:bg-[#336791]/10 hover:text-[#336791]"
+                        class="filter-btn px-4 py-2 rounded-lg border-2 border-[#38bdf8] bg-transparent text-[#38bdf8] text-sm font-bold uppercase transition-all hover:bg-[#38bdf8]/10"
                         data-filter="sql">
                         SQL
                     </button>
@@ -1222,21 +1239,21 @@
                 optimization.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:wsnh.code5621@gmail.com"
-                    class="px-8 py-4 bg-accent hover:bg-sky-400 text-midnight font-bold rounded-xl transition-all transform hover:scale-105 shadow-[0_10px_25px_rgba(56,189,248,0.2)] inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/yoghesh-analytics/" target="_blank" rel="noopener noreferrer"
-                    class="px-8 py-4 bg-[#0077b5]/5 hover:bg-[#0077b5] text-[#0077b5]/70 hover:text-white font-bold rounded-xl border border-[#0077b5]/20 hover:border-[#0077b5] transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
                 <a href="https://github.com/wsnh2022" target="_blank" rel="noopener noreferrer"
-                    class="px-8 py-4 bg-white/5 hover:bg-white text-white/50 hover:text-midnight font-bold rounded-xl border border-white/10 hover:border-white transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto">
+                    class="px-8 py-4 bg-transparent hover:bg-white/10 text-white font-bold rounded-xl border-2 border-white transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto">
                     <i class="fab fa-github"></i> GitHub
                 </a>
+                <a href="https://www.linkedin.com/in/yoghesh-analytics/" target="_blank" rel="noopener noreferrer"
+                    class="px-8 py-4 bg-transparent hover:bg-[#0077b5]/10 text-[#0077b5] font-bold rounded-xl border-2 border-[#0077b5] transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
                 <a href="https://www.instagram.com/datacraft.yogi/" target="_blank" rel="noopener noreferrer"
-                    class="px-8 py-4 bg-gradient-to-tr from-[#f09433]/5 via-[#dc2743]/5 to-[#bc1888]/5 hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] text-[#E1306C]/70 hover:text-white font-bold rounded-xl border border-[#dc2743]/20 hover:border-transparent transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto">
+                    class="px-8 py-4 bg-transparent hover:bg-[#E1306C]/10 text-[#E1306C] font-bold rounded-xl border-2 border-[#E1306C] transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto">
                     <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="mailto:wsnh.code5621@gmail.com"
+                    class="px-8 py-4 bg-accent hover:bg-sky-400 text-midnight font-bold rounded-xl transition-all transform hover:scale-105 shadow-[0_10px_25px_rgba(56,189,248,0.2)] inline-flex items-center justify-center gap-2 text-base w-full sm:w-auto border-2 border-accent">
+                    <i class="fas fa-envelope"></i> Email Me
                 </a>
             </div>
         </section>

@@ -3034,6 +3034,45 @@ function bindEvents() {
   els.sidebarClose.addEventListener("click", closeDrawer);
   els.sidebarBackdrop.addEventListener("click", closeDrawer);
 
+  // Edge-swipe: swipe right from the left edge opens the drawer (installed PWA
+  // only - a Safari tab uses that gesture for Back); swipe left closes it.
+  const isStandalone = () =>
+    window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  let swipe = null;
+
+  document.addEventListener("touchstart", event => {
+    if (!isMobile() || event.touches.length > 1 || isTyping(event.target)) return;
+    const t = event.touches[0];
+    const open = els.sidebar.classList.contains("open");
+    let mode = null;
+    if (!open && isStandalone() && t.clientX <= 28) mode = "open";
+    else if (open) mode = "close";
+    if (!mode) return;
+    swipe = { mode, x: t.clientX, y: t.clientY, time: Date.now() };
+  }, { passive: true });
+
+  document.addEventListener("touchmove", event => {
+    if (!swipe) return;
+    const t = event.touches[0];
+    const dx = t.clientX - swipe.x, dy = t.clientY - swipe.y;
+    if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) swipe = null;
+  }, { passive: true });
+
+  document.addEventListener("touchend", event => {
+    if (!swipe) return;
+    const t = event.changedTouches[0];
+    const dx = t.clientX - swipe.x, dy = t.clientY - swipe.y;
+    const horizontal = Math.abs(dx) > Math.abs(dy);
+    const fast = Date.now() - swipe.time < 250;
+    if (horizontal && swipe.mode === "open" && (dx > 55 || (fast && dx > 30))) {
+      openDrawer();
+      navigator.vibrate?.(8);
+    } else if (horizontal && swipe.mode === "close" && dx < -45) {
+      closeDrawer();
+    }
+    swipe = null;
+  }, { passive: true });
+
   document.addEventListener("keydown", event => {
     if (event.key === "/" && !isTyping(event.target) && !els.sidebar.classList.contains("open")) {
       event.preventDefault();

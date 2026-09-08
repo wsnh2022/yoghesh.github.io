@@ -1,10 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" fill="#080a18"/>
-  <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7c5ff5"/>
-      <stop offset="100%" stop-color="#3ecf5a"/>
-    </linearGradient>
-  </defs>
-  <text x="256" y="310" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="218" fill="url(#g)" text-anchor="middle">AI</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0d0f12"/>
+  <g transform="translate(81 98) scale(14)" fill="none" stroke="#f4f5f7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 7.5A4.5 4.5 0 0 1 11.5 3H17a4 4 0 0 1 4 4v5.5A4.5 4.5 0 0 1 16.5 17H12l-3.8 3v-3A4.5 4.5 0 0 1 4 12.5v-1A4 4 0 0 1 7 7.5Z"/>
+    <path d="M8 9.5h8M8 13h5"/>
+  </g>
 </svg>
